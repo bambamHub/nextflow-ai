@@ -1,26 +1,110 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ================= GLOBAL ================= */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #0f0f1a, #050508);
+  color: #ffffff;
+  font-family: Inter, system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Smooth UI */
+* {
+  transition: all 0.2s ease;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a40;
+  border-radius: 10px;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.5);
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  background: #1a1a2e;
+  border: 1px solid #2a2a40;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  background: rgba(15, 15, 26, 0.7);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid #2a2a40;
+}
+
+/* ================= PANELS ================= */
+
+.panel {
+  background: rgba(20, 20, 35, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid #2a2a40;
+  border-radius: 16px;
+}
+
+/* ================= NODES ================= */
+
+.node {
+  background: linear-gradient(145deg, #141424, #1a1a2e);
+  border: 1px solid #2a2a40;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.node-running {
+  border: 1px solid #8b5cf6;
+  box-shadow: 0 0 20px #8b5cf6;
+}
+
+.node-success {
+  border: 1px solid #22c55e;
+}
+
+.node-error {
+  border: 1px solid #ef4444;
+}
+
+/* ================= REACT FLOW ================= */
+
+.react-flow__edge-path {
+  stroke: #8b5cf6;
+  stroke-width: 2;
 }

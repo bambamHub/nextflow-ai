@@ -4,9 +4,13 @@ A modern **no-code workflow builder** inspired by Krea.ai, built with **Next.js,
 
 Users can visually create workflows with nodes like Text, Image, Video, LLM, Crop, and Extract Frame, and execute them with real-time chaining and parallel processing.
 
+<img width="1910" height="874" alt="image" src="https://github.com/user-attachments/assets/f2bed4ba-3f5e-4d34-a154-2c82e6fee828" />
+
+
 ---
 
 ## 🚀 Features
+
 
 ### 🧠 Core Functionality
 - Drag & drop workflow builder (React Flow)
